@@ -77,6 +77,10 @@ _DATASET_FORMAT_DATASET_MODULE_CLASS = {
         "dataset_module": "camvid",
         "dataset_class": "CamvidCustom",
     },
+    "Cityscapes": {
+        "dataset_module": "cityscpaes",
+        "dataset_class": "Cityscapes",
+    },
 }
 
 

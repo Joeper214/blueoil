@@ -23,6 +23,7 @@ output_files = [
     'openimagesv4_object_detection_has_validation',
     'camvid_custom_semantic_segmentation',
     'camvid_custom_semantic_segmentation_has_validation',
+    'cityscapes_semantic_segmentation',
 ]
 
 task_types = [
@@ -62,6 +63,8 @@ dataset_formats = [
     '  format: OpenImagesV4\n',
     '  format: CamvidCustom\n',
     '  format: CamvidCustom\n',
+    '  format: Cityscapes\n',
+    '  format: Cityscapes\n',
 ]
 
 dataset_train_paths = [
@@ -75,6 +78,7 @@ dataset_train_paths = [
     '  train_path: ./lmnet/tests/fixtures/datasets/custom_open_images_v4_bounding_boxes/for_train\n',
     '  train_path: ./lmnet/tests/fixtures/datasets/camvid_custom\n',
     '  train_path: ./lmnet/tests/fixtures/datasets/camvid_custom\n',
+    '  train_path: ./lmnet/tests/fixtures/datasets/cityscapes\n',
 ]
 
 dataset_test_paths = [
@@ -101,9 +105,11 @@ trainer_batch_sizes = [
     '  batch_size: 1\n',
     '  batch_size: 1\n',
     '  batch_size: 1\n',
+    '  batch_size: 1\n',
 ]
 
 trainer_epochs = [
+    '  epochs: 1\n',
     '  epochs: 1\n',
     '  epochs: 1\n',
     '  epochs: 1\n',
@@ -158,6 +164,7 @@ trainer_lr_schedules = [
     '  learning_rate_schedule: constant\n',
     '  learning_rate_schedule: constant\n',
     '  learning_rate_schedule: constant\n',
+    '  learning_rate_schedule: constant\n',
 ]
 
 trainer_initial_lrs = [
@@ -184,6 +191,7 @@ network_quantize_first_convolution = [
     '  quantize_first_convolution: yes\n',
     '  quantize_first_convolution: yes\n',
     '  quantize_first_convolution: yes\n',
+    '  quantize_first_convolution: yes\n',
 ]
 
 common_image_size_heights = [
@@ -197,9 +205,11 @@ common_image_size_heights = [
     '    - 128  # height\n',
     '    - 128  # height\n',
     '    - 128  # height\n',
+    '    - 128  # height\n',
 ]
 
 common_image_size_widths = [
+    '    - 128  # width\n',
     '    - 128  # width\n',
     '    - 128  # width\n',
     '    - 128  # width\n',
@@ -225,11 +235,13 @@ common_is_pretrain_model = [
     '  pretrain_model: false\n',
     '  pretrain_model: false\n',
     '  pretrain_model: false\n',
+    '  pretrain_model: false\n',
 ]
 
 common_enable_prefetch_comment = '  # enable dataset prefetch, set false if weired problem happens\n'
 
 common_enable_prefetch = [
+    '  dataset_prefetch: true',
     '  dataset_prefetch: true',
     '  dataset_prefetch: true',
     '  dataset_prefetch: true',

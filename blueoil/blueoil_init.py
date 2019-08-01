@@ -103,6 +103,10 @@ semantic_segmentation_dataset_formats = [
         'name': "CamvidCustom",
         'desc': "CamVid base cumstom format",
     },
+    {
+        'name': "Cityscapes",
+        'desc': "Cityscapes Compatible",
+    },
 ]
 
 
